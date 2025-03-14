@@ -44,6 +44,8 @@
             btnSoma = new Button();
             btnSubtracao = new Button();
             lblOperacao = new Label();
+            btnDivisao = new Button();
+            btnMulti = new Button();
             SuspendLayout();
             // 
             // lblResultado
@@ -51,16 +53,16 @@
             lblResultado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblResultado.AutoSize = true;
             lblResultado.Font = new Font("Verdana", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblResultado.Location = new Point(74, 51);
+            lblResultado.Location = new Point(269, 51);
             lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(228, 45);
+            lblResultado.Size = new Size(0, 45);
             lblResultado.TabIndex = 0;
-            lblResultado.Text = "Resultado";
+            lblResultado.TextAlign = ContentAlignment.MiddleRight;
             // 
             // btnSete
             // 
             btnSete.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSete.Location = new Point(64, 218);
+            btnSete.Location = new Point(27, 214);
             btnSete.Name = "btnSete";
             btnSete.Size = new Size(75, 60);
             btnSete.TabIndex = 1;
@@ -71,7 +73,7 @@
             // btnOito
             // 
             btnOito.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnOito.Location = new Point(150, 218);
+            btnOito.Location = new Point(113, 214);
             btnOito.Name = "btnOito";
             btnOito.Size = new Size(75, 60);
             btnOito.TabIndex = 2;
@@ -82,7 +84,7 @@
             // btnNove
             // 
             btnNove.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNove.Location = new Point(236, 218);
+            btnNove.Location = new Point(199, 214);
             btnNove.Name = "btnNove";
             btnNove.Size = new Size(75, 60);
             btnNove.TabIndex = 3;
@@ -93,7 +95,7 @@
             // btnQuatro
             // 
             btnQuatro.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnQuatro.Location = new Point(64, 284);
+            btnQuatro.Location = new Point(27, 280);
             btnQuatro.Name = "btnQuatro";
             btnQuatro.Size = new Size(75, 60);
             btnQuatro.TabIndex = 4;
@@ -104,7 +106,7 @@
             // btnCinco
             // 
             btnCinco.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCinco.Location = new Point(150, 284);
+            btnCinco.Location = new Point(113, 280);
             btnCinco.Name = "btnCinco";
             btnCinco.Size = new Size(75, 60);
             btnCinco.TabIndex = 5;
@@ -115,7 +117,7 @@
             // btnSeis
             // 
             btnSeis.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSeis.Location = new Point(236, 284);
+            btnSeis.Location = new Point(199, 280);
             btnSeis.Name = "btnSeis";
             btnSeis.Size = new Size(75, 60);
             btnSeis.TabIndex = 6;
@@ -126,7 +128,7 @@
             // btnUm
             // 
             btnUm.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUm.Location = new Point(64, 350);
+            btnUm.Location = new Point(27, 346);
             btnUm.Name = "btnUm";
             btnUm.Size = new Size(75, 60);
             btnUm.TabIndex = 7;
@@ -137,7 +139,7 @@
             // btnDois
             // 
             btnDois.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDois.Location = new Point(150, 350);
+            btnDois.Location = new Point(113, 346);
             btnDois.Name = "btnDois";
             btnDois.Size = new Size(75, 60);
             btnDois.TabIndex = 8;
@@ -148,7 +150,7 @@
             // btnTres
             // 
             btnTres.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTres.Location = new Point(236, 350);
+            btnTres.Location = new Point(199, 346);
             btnTres.Name = "btnTres";
             btnTres.Size = new Size(75, 60);
             btnTres.TabIndex = 9;
@@ -159,7 +161,7 @@
             // btnZero
             // 
             btnZero.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnZero.Location = new Point(150, 416);
+            btnZero.Location = new Point(113, 412);
             btnZero.Name = "btnZero";
             btnZero.Size = new Size(75, 60);
             btnZero.TabIndex = 10;
@@ -173,7 +175,7 @@
             btnIgual.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 192);
             btnIgual.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnIgual.ForeColor = SystemColors.HighlightText;
-            btnIgual.Location = new Point(236, 416);
+            btnIgual.Location = new Point(199, 412);
             btnIgual.Name = "btnIgual";
             btnIgual.Size = new Size(75, 60);
             btnIgual.TabIndex = 11;
@@ -184,7 +186,7 @@
             // btnCE
             // 
             btnCE.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCE.Location = new Point(64, 159);
+            btnCE.Location = new Point(27, 155);
             btnCE.Name = "btnCE";
             btnCE.Size = new Size(75, 53);
             btnCE.TabIndex = 12;
@@ -195,7 +197,7 @@
             // btnSoma
             // 
             btnSoma.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSoma.Location = new Point(150, 159);
+            btnSoma.Location = new Point(113, 155);
             btnSoma.Name = "btnSoma";
             btnSoma.Size = new Size(75, 53);
             btnSoma.TabIndex = 13;
@@ -206,7 +208,7 @@
             // btnSubtracao
             // 
             btnSubtracao.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSubtracao.Location = new Point(236, 160);
+            btnSubtracao.Location = new Point(199, 156);
             btnSubtracao.Name = "btnSubtracao";
             btnSubtracao.Size = new Size(75, 53);
             btnSubtracao.TabIndex = 14;
@@ -223,11 +225,35 @@
             lblOperacao.TabIndex = 15;
             lblOperacao.Text = "Operacao";
             // 
+            // btnDivisao
+            // 
+            btnDivisao.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDivisao.Location = new Point(287, 214);
+            btnDivisao.Name = "btnDivisao";
+            btnDivisao.Size = new Size(75, 60);
+            btnDivisao.TabIndex = 16;
+            btnDivisao.Text = "/";
+            btnDivisao.UseVisualStyleBackColor = true;
+            btnDivisao.Click += btnDivisao_Click;
+            // 
+            // btnMulti
+            // 
+            btnMulti.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMulti.Location = new Point(287, 156);
+            btnMulti.Name = "btnMulti";
+            btnMulti.Size = new Size(75, 53);
+            btnMulti.TabIndex = 17;
+            btnMulti.Text = "*";
+            btnMulti.UseVisualStyleBackColor = true;
+            btnMulti.Click += btnMulti_Click;
+            // 
             // Calculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(374, 508);
+            Controls.Add(btnMulti);
+            Controls.Add(btnDivisao);
             Controls.Add(lblOperacao);
             Controls.Add(btnSubtracao);
             Controls.Add(btnSoma);
@@ -271,5 +297,7 @@
         private Button btnSoma;
         private Button btnSubtracao;
         private Label lblOperacao;
+        private Button btnDivisao;
+        private Button btnMulti;
     }
 }

@@ -13,21 +13,30 @@ namespace CalculadoraWF.Models
             
         }
 
-        public int Soma(int valor1, int valor2)
+        public double v1 { get; set; }
+        public double v2 { get; set; }
+        public double resultado { get; set; }
+        public char operacao { get; set; }
+
+
+        public void Calculadora()
         {
-            return valor1 + valor2;
+            switch (this.operacao)
+            {
+                case '+':
+                    this.resultado = this.v1 + this.v2;
+                    break;
+                case '-':
+                    this.resultado = this.v1 - this.v2;
+                    break;
+                case '*':
+                    this.resultado = this.v1 * this.v2;
+                    break;
+                case '/':
+                    this.resultado = this.v1 / this.v2;
+                    break;
+            }
         }
-        public int Subtracao(int valor1, int valor2)
-        {
-            return valor1 - valor2;
-        }
-        public int Multiplicacao(int valor1, int valor2)
-        {
-            return valor1 * valor2;
-        }
-        public int Divisao(int valor1, int valor2)
-        {
-            return valor1 / valor2;
-        }
+
     }
 }
