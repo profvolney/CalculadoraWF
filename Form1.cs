@@ -7,12 +7,60 @@ namespace CalculadoraWF
         public Calculadora()
         {
             InitializeComponent();
-            //btnSoma.Click += new EventHandler(btnSoma_Click);
-            //btnSubtracao.Click += new EventHandler(btnSubtracao_Click);
+            lblResultado.Text = "";
+            lblOperacao.Text = "";
         }
+        
+        private void Calculadora_Load(object sender, EventArgs e)
+        {
 
+        }
+        private void btnIgual_Click(object sender, EventArgs e)
+        {
+            string operador;
+            string resultado;
+            string calculo;
+
+            operador = btnSoma.Text;
+
+            try
+            {
+                switch (operador)
+                {
+                    case "+":
+                        Calcular calcular = new Calcular();
+                        //lblResultado.Text = calcular.Soma(num1, num2).ToString();
+
+                        //lblResultado.Text = "";
+                        //resultado = Convert.ToDecimal(lblResultado.Text) + calculo;
+                        //lblResultado.Text = resultado.ToString();
+                        break;
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+
+        }
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+            lblResultado.Text = "";
+            lblOperacao.Text = "";
+        }
+        private void btnSoma_Click(object sender, EventArgs e)
+        {
+
+        }
         private void btnSubtracao_Click(object? sender, EventArgs e)
         {
+            lblResultado.Text = "";
             string operador, valorDigitado;
 
             operador = btnSubtracao.Text;
@@ -21,147 +69,112 @@ namespace CalculadoraWF
             switch (operador)
             {
                 case "-":
-                    
+
                     //lblResultado.Text = resultado.ToString();
                     break;
             }
         }
-
-        private void Calculadora_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnIgual_Click(object sender, EventArgs e)
-        {
-            int num1 = Convert.ToInt32(btnUm.Text);
-            int num2 = Convert.ToInt32(btnDois.Text); ;
-            int num4 = Convert.ToInt32(btnTres.Text);
-            int num5 = Convert.ToInt32(btnQuatro.Text);
-            int num6 = Convert.ToInt32(btnCinco.Text);
-            int num7 = Convert.ToInt32(btnTres.Text);
-            int num8 = Convert.ToInt32(btnTres.Text);
-            int num9 = Convert.ToInt32(btnTres.Text);
-            int num0 = Convert.ToInt32(btnTres.Text);
-
-            try
-            {
-                Calcular calcular = new Calcular();
-                lblResultado.Text = calcular.Soma(num1, num2).ToString();
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
-           
-
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            lblResultado.Text = "0";
-        }
-
-        private void btnSoma_Click(object sender, EventArgs e)
-        {
-            string operador;
-            string resultado;
-            
-            operador = btnSoma.Text;
-
-
-            switch (operador)
-            {
-                case "+":
-                    resultado = btnUm.Text + btnDois.Text + btnTres.Text;
-                    lblResultado.Text = resultado.ToString();
-                    break;
-            }
-        }
-
+        
+        
         private void btnUm_Click(object sender, EventArgs e)
-        {
-            string num1, valorDigitado;
+        {   
+            string num1 = "1";
 
-            num1 = "1";
-            if (btnUm.Text == "1")
+            if (btnUm.Text == num1)
                 num1 = btnUm.Text;
-            lblResultado.Text = num1.ToString();
-        }
 
+            lblResultado.Text = lblResultado.Text += num1;            
+            lblOperacao.Text = lblOperacao.Text += num1;  
+        }
         private void btnDois_Click(object sender, EventArgs e)
         {
-            string num2;
-            num2 = "2";
-            if (btnDois.Text == "2")
-                num2 = btnDois.Text;
-            lblResultado.Text = num2.ToString();
-        }
+           string num2 = "2";
 
+            if (btnDois.Text == num2)
+                num2 = btnDois.Text;
+
+            lblResultado.Text = lblResultado.Text += num2;
+            lblOperacao.Text = lblOperacao.Text += num2;
+        }
         private void btnTres_Click(object sender, EventArgs e)
         {
-            string num3;
-            num3 = "3";
-            if (btnTres.Text == "3")
+            string num3 = "3";
+
+            if (btnTres.Text == num3)
                 num3 = btnTres.Text;
-            lblResultado.Text = num3.ToString();
+
+            lblResultado.Text = lblResultado.Text += num3;
+            lblOperacao.Text = lblOperacao.Text += num3;
         }
-
-
         private void btnQuatro_Click_1(object sender, EventArgs e)
         {
-            string num4;
-            num4 = "4";
-            if (btnQuatro.Text == "4")
-                num4 = btnQuatro.Text;
-            lblResultado.Text = num4.ToString();
-        }
+            string num4 = "4";
 
+            if (btnQuatro.Text == num4)
+                num4 = btnQuatro.Text;
+
+            lblResultado.Text = lblResultado.Text += num4;
+            lblOperacao.Text = lblOperacao.Text += num4;            
+        }
         private void btnCinco_Click(object sender, EventArgs e)
         {
-            string num5;
-            num5 = "5";
-            if (btnCinco.Text == "5")
-                num5 = btnCinco.Text;
-            lblResultado.Text = num5.ToString();
-        }
+            string num5 = "5";
 
+            if (btnCinco.Text == num5)
+                num5 = btnCinco.Text;
+
+            lblResultado.Text = lblResultado.Text += num5;
+            lblOperacao.Text = lblOperacao.Text += num5;
+        }
         private void btnSeis_Click(object sender, EventArgs e)
         {
-            string num6;
-            num6 = "6";
-            if (btnSeis.Text == "6")
-                num6 = btnSeis.Text;
-            lblResultado.Text = num6.ToString();
-        }
+            string num6 = "6";
 
+            if (btnSeis.Text == num6)
+                num6 = btnSeis.Text;
+
+            lblResultado.Text = lblResultado.Text += num6;
+            lblOperacao.Text = lblOperacao.Text += num6;
+        }
         private void btnSete_Click(object sender, EventArgs e)
         {
-            string num7;
-            num7 = "7";
-            if (btnSete.Text == "7")
-                num7 = btnSete.Text;
-            lblResultado.Text = num7.ToString();
-        }
+            string num7 = "7";
 
+            if (btnSete.Text == num7)
+                num7 = btnSete.Text;
+
+            lblResultado.Text = lblResultado.Text += num7;
+            lblOperacao.Text = lblOperacao.Text += num7;
+        }
         private void btnOito_Click(object sender, EventArgs e)
         {
-            string num8;
-            num8 = "8";
-            if (btnOito.Text == "8")
+            string num8 = "8";
+
+            if (btnOito.Text == num8)
                 num8 = btnOito.Text;
-            lblResultado.Text = num8.ToString();
-        }
 
+            lblResultado.Text = lblResultado.Text += num8;
+            lblOperacao.Text = lblOperacao.Text += num8;
+        }
         private void btnNove_Click(object sender, EventArgs e)
-        {
-            string num9;
-            num9 = "9";
-            if (btnNove.Text == "9")
-                num9 = btnNove.Text;
-            lblResultado.Text = num9.ToString();
-        }
+        {            
+            string num9 = "9";
 
+            if (btnNove.Text == num9)
+                num9 = btnNove.Text;
+
+            lblResultado.Text = lblResultado.Text += num9;
+            lblOperacao.Text = lblOperacao.Text += num9;
+        }
+        private void btnZero_Click(object sender, EventArgs e)
+        {
+            string num0 = "0";
+
+            if (btnZero.Text == num0)
+                num0 = btnZero.Text;
+
+            lblResultado.Text = lblResultado.Text += num0;
+            lblOperacao.Text = lblOperacao.Text += num0;
+        }
     }
 }

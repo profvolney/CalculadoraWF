@@ -40,9 +40,10 @@
             btnTres = new Button();
             btnZero = new Button();
             btnIgual = new Button();
-            button12 = new Button();
+            btnCE = new Button();
             btnSoma = new Button();
             btnSubtracao = new Button();
+            lblOperacao = new Label();
             SuspendLayout();
             // 
             // lblResultado
@@ -164,6 +165,7 @@
             btnZero.TabIndex = 10;
             btnZero.Text = "0";
             btnZero.UseVisualStyleBackColor = true;
+            btnZero.Click += btnZero_Click;
             // 
             // btnIgual
             // 
@@ -179,16 +181,16 @@
             btnIgual.UseVisualStyleBackColor = false;
             btnIgual.Click += btnIgual_Click;
             // 
-            // button12
+            // btnCE
             // 
-            button12.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button12.Location = new Point(64, 159);
-            button12.Name = "button12";
-            button12.Size = new Size(75, 53);
-            button12.TabIndex = 12;
-            button12.Text = "CE";
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += button12_Click;
+            btnCE.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCE.Location = new Point(64, 159);
+            btnCE.Name = "btnCE";
+            btnCE.Size = new Size(75, 53);
+            btnCE.TabIndex = 12;
+            btnCE.Text = "CE";
+            btnCE.UseVisualStyleBackColor = true;
+            btnCE.Click += btnCE_Click;
             // 
             // btnSoma
             // 
@@ -211,14 +213,25 @@
             btnSubtracao.Text = "-";
             btnSubtracao.UseVisualStyleBackColor = true;
             // 
+            // lblOperacao
+            // 
+            lblOperacao.AutoSize = true;
+            lblOperacao.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblOperacao.Location = new Point(101, 96);
+            lblOperacao.Name = "lblOperacao";
+            lblOperacao.Size = new Size(168, 35);
+            lblOperacao.TabIndex = 15;
+            lblOperacao.Text = "Operacao";
+            // 
             // Calculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(374, 508);
+            Controls.Add(lblOperacao);
             Controls.Add(btnSubtracao);
             Controls.Add(btnSoma);
-            Controls.Add(button12);
+            Controls.Add(btnCE);
             Controls.Add(btnIgual);
             Controls.Add(btnZero);
             Controls.Add(btnTres);
@@ -254,8 +267,9 @@
         private Button btnTres;
         private Button btnZero;
         private Button btnIgual;
-        private Button button12;
+        private Button btnCE;
         private Button btnSoma;
         private Button btnSubtracao;
+        private Label lblOperacao;
     }
 }
